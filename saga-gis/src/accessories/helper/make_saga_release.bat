@@ -16,6 +16,8 @@ SET DOXEXE=doxygen.exe
 REM ___________________________________
 REM Version
 
+SET SAGA=D:\saga\saga-code\saga-7.6\saga-gis
+SET SAGA_ROOT=%SAGA%
 SET SAGA_VER_MAJOR=7
 SET SAGA_VER_MINOR=6
 SET SAGA_VER_RELEASE=1
@@ -34,7 +36,6 @@ ECHO #                                #
 ECHO ##################################
 ECHO __________________________________
 ECHO Things you should have updated and committed before:
-ECHO.  - ArcSAGA Tools
 ECHO.  - Translation Files
 ECHO.  - Tools Interface (Python)
 ECHO.
@@ -52,8 +53,6 @@ REM ___________________________________
 CALL make_arcsaga_toolboxes.bat
 
 REM ___________________________________
-SET SAGA_ROOT=%SAGA%
-
 MKDIR "%SAGA_VERSION%"
 PUSHD "%SAGA_VERSION%"
 
@@ -109,6 +108,7 @@ REM ___________________________________
 REM GIT Source Code Repository
 %GITEXE% clone git://git.code.sf.net/p/saga-gis/code %SAGA_VERSION%_src -q
 PUSHD %SAGA_VERSION%_src
+%GITEXE% checkout release-%SAGA_VER_TEXT%
 REM Create a branch (better do manually)
 REM %GITEXE% branch release-%SAGA_VER_TEXT%
 REM %GITEXE% checkout release-%SAGA_VER_TEXT%

@@ -3,9 +3,15 @@
 REM ___________________________________
 SET GITEXE=git
 
+SET SAGA=D:\saga\saga-code\saga-7.6\saga-gis
 SET SAGA_ROOT=%SAGA%
 SET SAGA_CMD="%SAGA_ROOT%\bin\saga_vc_win32\saga_cmd.exe"
 SET SAGA_SRC=saga_src
+SET SAGA_VER_MAJOR=7
+SET SAGA_VER_MINOR=6
+SET SAGA_VER_RELEASE=1
+SET SAGA_VER_TEXT=%SAGA_VER_MAJOR%.%SAGA_VER_MINOR%.%SAGA_VER_RELEASE%
+SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
 
 SET RESPATH=%SAGA_ROOT%\src\saga_core\saga_gui\res
 
@@ -13,6 +19,7 @@ REM ___________________________________
 REM GIT Source Code Repository
 %GITEXE% clone git://git.code.sf.net/p/saga-gis/code %SAGA_SRC%
 PUSHD %SAGA_SRC%
+%GITEXE% checkout release-%SAGA_VER_TEXT%
 RMDIR /S/Q .git
 POPD
 
