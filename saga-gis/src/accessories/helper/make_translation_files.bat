@@ -3,7 +3,7 @@
 REM ___________________________________
 SET GITEXE=git
 
-SET SAGA=D:\saga\saga-code\saga-7.6\saga-gis
+SET SAGA=D:\saga\saga-code\bug-fix-release\saga-gis
 SET SAGA_ROOT=%SAGA%
 SET SAGA_CMD="%SAGA_ROOT%\bin\saga_vc_win32\saga_cmd.exe"
 SET SAGA_SRC=saga_src
