@@ -123,8 +123,8 @@
 //---------------------------------------------------------
 #define SAGA_MAJOR_VERSION		7
 #define SAGA_MINOR_VERSION		6
-#define SAGA_RELEASE_NUMBER		4
-#define SAGA_VERSION			SG_T("7.6.4")
+#define SAGA_RELEASE_NUMBER		5
+#define SAGA_VERSION			SG_T("7.6.5")
 
 
 ///////////////////////////////////////////////////////////
