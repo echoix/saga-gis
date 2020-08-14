@@ -9,14 +9,20 @@ REM ___________________________________
 REM Tools
 
 SET ZIPEXE="C:\Program Files\7-Zip\7z.exe" a -r -y -mx5
-SET ISETUP="C:\Program Files (x86)\Inno Setup 5\ISCC.exe"
-SET GITEXE=git
-SET DOXEXE=doxygen.exe
+SET ISETUP="C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
+SET GITEXE="C:\Program Files\Git\bin\git.exe"
+SET DOXEXE="C:\Program Files\doxygen\bin\doxygen.exe"
+
+REM ___________________________________
+REM Absolute Path to SAGA Root Directory
+
+PUSHD %CD%\..\..\..
+SET SAGA_ROOT=%CD%
+POPD
 
 REM ___________________________________
 REM Version
 
-SET SAGA_ROOT=%CD%\..\..\..
 SET SAGA_VER_MAJOR=7
 SET SAGA_VER_MINOR=7
 SET SAGA_VER_RELEASE=1

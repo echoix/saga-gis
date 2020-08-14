@@ -3,13 +3,13 @@
 ; - Place saga.iss and saga_readme.rtf in the SAGA folder (contains saga_gui.exe, etc.).
 ; - Open saga.iss in Inno Setup.
 ; - Choose Build | Compile.
-; Contribute by Philipp J. Hess
+; Contributed by Philipp J. Hess
 
 [Setup]
 AppName=SAGA - System for Automated Geoscientific Analyses
 AppVerName=SAGA 7.7.1
 
-DefaultDirName={pf}\SAGA-GIS
+DefaultDirName={commonpf}\SAGA-GIS
 DefaultGroupName=SAGA GIS
 UninstallDisplayIcon={app}\saga_gui.exe
 
