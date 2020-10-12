@@ -26,7 +26,7 @@ REM Version
 SET SAGA_VER_TEXT=7.8.1
 SET SAGA_VER_NEXT=7.8.2
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
-REM SET SWITCH_TO_BRANCH=true
+SET SWITCH_TO_BRANCH=true
 
 ECHO __________________________________
 ECHO ##################################
