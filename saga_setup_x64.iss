@@ -1,5 +1,5 @@
-; To build installer (for example, saga-7.8.2_setup.exe).
-; - Unzip the SAGA binary files in their own folder (for example, saga-7.8.2.zip).
+; To build installer (for example, saga-7.8.3_setup.exe).
+; - Unzip the SAGA binary files in their own folder (for example, saga-7.8.3.zip).
 ; - Place saga.iss and saga_readme.rtf in the SAGA folder (contains saga_gui.exe, etc.).
 ; - Open saga.iss in Inno Setup.
 ; - Choose Build | Compile.
@@ -7,7 +7,7 @@
 
 [Setup]
 AppName=SAGA - System for Automated Geoscientific Analyses
-AppVerName=SAGA 7.8.2
+AppVerName=SAGA 7.8.3
 
 ArchitecturesAllowed=x64
 ArchitecturesInstallIn64BitMode=x64
@@ -22,9 +22,9 @@ Compression=lzma
 SolidCompression=yes
 
 OutputDir=.
-OutputBaseFilename=saga-7.8.2_x64_setup
+OutputBaseFilename=saga-7.8.3_x64_setup
 
-VersionInfoVersion=7.8.2.0
+VersionInfoVersion=7.8.3.0
 VersionInfoCompany=SAGA User Group Association
 VersionInfoCopyright=(c) 2005-2018 by O. Conrad
 VersionInfoDescription=SAGA GIS single-file installer
@@ -49,5 +49,5 @@ Name: "{commondesktop}\SAGA GIS"; Filename: "{app}\saga_gui.exe"; WorkingDir: "{
 Root: HKLM; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\saga_gui.exe"; ValueType: string; ValueName: ""; ValueData: "{app}\saga_gui.exe"; Flags: uninsdeletekey
 Root: HKLM; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\saga_gui.exe"; ValueType: string; ValueName: "Path"; ValueData: "{app}"
 
-Root: HKLM; Subkey: "SOFTWARE\SAGA User Group Association\SAGA GIS\7.8.2"; ValueType: string; ValueName: "InstallDir"; ValueData: "{app}"; Flags: uninsdeletekey
-Root: HKLM; Subkey: "SOFTWARE\SAGA User Group Association\SAGA GIS\7.8.2"; ValueType: string; ValueName: "Version"; ValueData: "7.8.2.0"
+Root: HKLM; Subkey: "SOFTWARE\SAGA User Group Association\SAGA GIS\7.8.3"; ValueType: string; ValueName: "InstallDir"; ValueData: "{app}"; Flags: uninsdeletekey
+Root: HKLM; Subkey: "SOFTWARE\SAGA User Group Association\SAGA GIS\7.8.3"; ValueType: string; ValueName: "Version"; ValueData: "7.8.3.0"

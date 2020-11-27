@@ -23,8 +23,8 @@ POPD
 REM ___________________________________
 REM Version
 
-SET SAGA_VER_TEXT=7.8.2
-SET SAGA_VER_NEXT=7.8.3
+SET SAGA_VER_TEXT=7.8.3
+SET SAGA_VER_NEXT=7.8.4
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
 SET SWITCH_TO_BRANCH=true
 
@@ -138,7 +138,7 @@ MOVE "%SAGA_VERSION%_%SAGA_CONFIG%\%SAGA_VERSION%_%SAGA_CONFIG%_setup.exe"
 
 RMDIR /S/Q "%SAGA_VERSION%_%SAGA_CONFIG%"
 
-DEL /F saga4qgis.zip
+DEL /F %SAGA4QGIS%
 
 
 REM ___________________________________
