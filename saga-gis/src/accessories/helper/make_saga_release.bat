@@ -23,10 +23,10 @@ POPD
 REM ___________________________________
 REM Version
 
-SET SAGA_VER_TEXT=7.10.0
-SET SAGA_VER_NEXT=7.11.0
+SET SAGA_VER_TEXT=7.9.1
+SET SAGA_VER_NEXT=7.9.2
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
-REM SET SWITCH_TO_BRANCH=true
+SET SWITCH_TO_BRANCH=true
 
 ECHO __________________________________
 ECHO ##################################
