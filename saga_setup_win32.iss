@@ -35,7 +35,7 @@ Source: "saga_cmd.exe"; DestDir: "{app}"
 Source: "*.*"; Excludes: "*.iss,*.ini,*.cfg,*.bak,*.exe,*.bat,*.rtf"; DestDir: "{app}"
 Source: "tools\*.*"; DestDir: "{app}\tools"
 Source: "tools\toolchains\*.*"; DestDir: "{app}\tools\toolchains"
-Source: "dll\*.*"; DestDir: "{app}\dll"
+Source: "dll\*.*"; DestDir: "{app}\dll"; Flags: recursesubdirs
 
 [Icons]
 ; Start up in tools folder so SAGA will load all tools automatically.
