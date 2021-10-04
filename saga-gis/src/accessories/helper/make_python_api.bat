@@ -39,7 +39,11 @@ IF "%SAGA_ROOT%" == "" (
 )
 
 IF "%SAGA_LIBDIR%" == "" (
-	SET SAGA_LIBDIR=%SAGA_ROOT%\bin\saga_%ARCHITECTURE%
+	IF /i "%ARCHITECTURE%" == "win32" (
+		SET SAGA_LIBDIR=%SAGA_ROOT%\bin_win32\saga_%ARCHITECTURE%
+	) ELSE (
+		SET SAGA_LIBDIR=%SAGA_ROOT%\bin\saga_%ARCHITECTURE%
+	)
 )
 
 IF "%VARSALL%" == "" (
