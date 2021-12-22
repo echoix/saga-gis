@@ -33,10 +33,11 @@ IF "%SAGA_DIR_X64%" == "" (
 REM ___________________________________
 REM Version
 
-SET SAGA_VER_TEXT=8.1.0
-SET SAGA_VER_NEXT=8.2.0
+SET SAGA_VER_TEXT=8.1.1
+SET SAGA_VER_NEXT=8.1.2
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
-REM SET SWITCH_TO_BRANCH=true
+SET SWITCH_TO_BRANCH=true
+
 
 ECHO __________________________________
 ECHO ##################################
@@ -55,8 +56,16 @@ ECHO.  - Translation Files
 ECHO.  - Tools Interface (Python)
 ECHO.
 ECHO Enter 'y' to continue!
-SET /P CONTINUE=
-IF NOT '%CONTINUE%' == 'y' EXIT
+SET /P ANSWER0=
+IF /i NOT '%ANSWER0%' == 'y' EXIT
+
+ECHO __________________________________
+ECHO Create tag/branch %SAGA_VER_TEXT% [y/n]
+SET /P ANSWER1=
+IF /i '%ANSWER1%' == 'y' (
+	SET GIT_BRANCH=true
+)
+
 
 
 REM ___________________________________
@@ -81,12 +90,15 @@ REM GIT Source Code Repository
 
 PUSHD %SAGA_VERSION%
 
-REM Create a tag
-%GITEXE% tag v%SAGA_VER_TEXT%
-%GITEXE% push v%SAGA_VER_TEXT%
+IF /i "%GIT_BRANCH%" == "true" (
+	REM Create a tag
+	%GITEXE% tag v%SAGA_VER_TEXT%
+	%GITEXE% push v%SAGA_VER_TEXT%
 
-REM Create a branch (better do manually)
-REM %GITEXE% branch release-%SAGA_VER_TEXT%
+	REM Create a branch (better do manually?!)
+	%GITEXE% branch release-%SAGA_VER_NEXT%
+	%GITEXE% push release-%SAGA_VER_NEXT%
+)
 
 IF /i "%SWITCH_TO_BRANCH%" == "true" (
 	%GITEXE% checkout release-%SAGA_VER_TEXT%
