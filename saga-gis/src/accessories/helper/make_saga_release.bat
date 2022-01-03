@@ -33,8 +33,8 @@ IF "%SAGA_DIR_X64%" == "" (
 REM ___________________________________
 REM Version
 
-SET SAGA_VER_TEXT=8.1.1
-SET SAGA_VER_NEXT=8.1.2
+SET SAGA_VER_TEXT=8.1.2
+SET SAGA_VER_NEXT=8.1.3
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
 SET SWITCH_TO_BRANCH=true
 
