@@ -33,8 +33,8 @@ IF "%SAGA_DIR_X64%" == "" (
 REM ___________________________________
 REM Version
 
-SET SAGA_VER_TEXT=8.1.2
-SET SAGA_VER_NEXT=8.1.3
+SET SAGA_VER_TEXT=8.1.3
+SET SAGA_VER_NEXT=8.1.4
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
 SET SWITCH_TO_BRANCH=true
 
@@ -262,7 +262,7 @@ ECHO.
 ECHO - Add new bug tracker milestone for next aspired version
 ECHO.    https://sourceforge.net/p/saga-gis/bugs/milestones
 ECHO.
-ECHO - Commit a comment like: SAGA version updated to %SAGA_VER_TEXT%
+ECHO - Commit a comment like: Release of SAGA version %SAGA_VER_TEXT%
 ECHO.    https://sourceforge.net/p/saga-gis/news/
 ECHO.
 ECHO __________________________________
