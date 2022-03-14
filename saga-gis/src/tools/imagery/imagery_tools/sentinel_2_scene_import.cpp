@@ -626,7 +626,7 @@ bool CSentinel_2_Scene_Import::Load_Classification(CSG_Grid *pGrid, const CSG_St
 	{
 		if( ClassList[i].Cmp_Name("Scene_Classification_ID")
 		&&  ClassList[i]("SCENE_CLASSIFICATION_TEXT" )
-		&&  ClassList[i].Get_Content("SCENE_CLASSIFICATION_INDEX", Index) )
+		&&  ClassList[i]["SCENE_CLASSIFICATION_INDEX"].Get_Content().asInt(Index) )
 		{
 			CSG_String Name(ClassList[i]["SCENE_CLASSIFICATION_TEXT"].Get_Content().AfterFirst('_')); Name.Replace("_", " ");
 
