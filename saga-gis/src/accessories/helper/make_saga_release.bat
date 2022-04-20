@@ -33,8 +33,8 @@ IF "%SAGA_DIR_X64%" == "" (
 REM ___________________________________
 REM Version
 
-SET SAGA_VER_TEXT=8.2.1
-SET SAGA_VER_NEXT=8.2.1
+SET SAGA_VER_TEXT=8.2.2
+SET SAGA_VER_NEXT=8.2.3
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
 
 ECHO __________________________________
@@ -65,7 +65,7 @@ IF /i '%ANSWER1%' == 'y' (
 ) ELSE (
 	REM yes for bug-fix releases (it's the master otherwise!)
 	ECHO.
-	ECHO Switch to branch %SAGA_VER_TEXT% [y/n]
+	ECHO Switch to branch %SAGA_VER_TEXT% (bug-fix-release!) [y/n]
 	SET /P ANSWER2=
 	IF /i '%ANSWER2%' == 'y' (
 		SET SWITCH_TO_BRANCH=true
