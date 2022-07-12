@@ -2,6 +2,8 @@
 
 PUSHD %~dp0
 
+SET SWITCH_TO_BRANCH=8.2.3
+
 REM ___________________________________
 IF "%SAGA_ROOT%" == "" (
 	SET SAGA_ROOT=%CD%\..\..\..
@@ -20,6 +22,10 @@ REM GIT Source Code Repository
 SET SAGA_SRC=saga_src
 %GITEXE% clone git://git.code.sf.net/p/saga-gis/code %SAGA_SRC%
 PUSHD %SAGA_SRC%
+IF NOT "%SWITCH_TO_BRANCH%" == "" (
+	ECHO switch to branch release-%SWITCH_TO_BRANCH%
+	%GITEXE% checkout release-%SWITCH_TO_BRANCH%
+)
 RMDIR /S/Q .git
 POPD
 
