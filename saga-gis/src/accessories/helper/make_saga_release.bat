@@ -33,8 +33,8 @@ IF "%SAGA_DIR_X64%" == "" (
 REM ___________________________________
 REM Version
 
-SET SAGA_VER_TEXT=8.2.3
-SET SAGA_VER_NEXT=8.2.4
+SET SAGA_VER_TEXT=8.2.4
+SET SAGA_VER_NEXT=8.2.5
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
 
 REM Don't forget to activate the flag
