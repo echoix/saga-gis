@@ -33,14 +33,14 @@ IF "%SAGA_DIR_X64%" == "" (
 REM ___________________________________
 REM Version
 
-SET SAGA_VER_TEXT=8.3.0
-SET SAGA_VER_NEXT=8.4.0
+SET SAGA_VER_TEXT=8.3.1
+SET SAGA_VER_NEXT=8.3.2
 SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
 
 REM Don't forget to activate the flag
 REM - SWITCH_TO_BRANCH -
 REM for all bug-fix-releases!
-REM SET SWITCH_TO_BRANCH=true
+SET SWITCH_TO_BRANCH=true
 
 REM ___________________________________
 ECHO __________________________________
@@ -256,7 +256,6 @@ ECHO.
 ECHO - Update version numbers accordingly:
 ECHO.    ./saga_setup_x64.iss
 ECHO.    ./saga_setup_win32.iss
-ECHO.    ./saga-gis/configure.ac
 ECHO.    ./saga-gis/version.cmake
 ECHO.    ./saga-gis/src/saga_core/saga_api/saga_api.h
 ECHO.    ./saga-gis/src/saga_core/saga_cmd/man/saga_cmd.1
