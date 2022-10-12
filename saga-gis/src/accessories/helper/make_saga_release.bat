@@ -35,7 +35,7 @@ REM Version
 
 SET SAGA_VER_TEXT=8.3.1
 SET SAGA_VER_NEXT=8.3.2
-SET SAGA_VERSION=saga-%SAGA_VER_TEXT%
+SET SAGA_VERSION=saga-%SAGA_VER_NEXT%
 
 REM Don't forget to activate the flag
 REM - SWITCH_TO_BRANCH -
@@ -50,7 +50,7 @@ ECHO #           B E G I N            #
 ECHO #      with the preparation      #
 ECHO #    of the release files for    #
 ECHO #                                #
-ECHO #          SAGA %SAGA_VER_TEXT%            #
+ECHO #          SAGA %SAGA_VER_NEXT%            #
 ECHO #                                #
 ECHO ##################################
 ECHO __________________________________
@@ -64,7 +64,7 @@ SET /P ANSWER0=
 IF /i NOT '%ANSWER0%' == 'y' EXIT
 
 ECHO __________________________________
-ECHO Create tag/branch %SAGA_VER_TEXT% [y/n]
+ECHO Create tag/branch %SAGA_VER_NEXT% [y/n]
 SET /P ANSWER1=
 IF /i '%ANSWER1%' == 'y' (
 	SET GIT_BRANCH=true
@@ -95,8 +95,8 @@ PUSHD %SAGA_VERSION%
 
 IF /i "%GIT_BRANCH%" == "true" (
 	REM Create a tag
-	%GITEXE% tag v%SAGA_VER_TEXT%
-	%GITEXE% push v%SAGA_VER_TEXT%
+	%GITEXE% tag v%SAGA_VER_NEXT%
+	%GITEXE% push v%SAGA_VER_NEXT%
 
 	REM Create a branch (better do manually?!)
 	%GITEXE% branch release-%SAGA_VER_NEXT%
@@ -104,8 +104,8 @@ IF /i "%GIT_BRANCH%" == "true" (
 )
 
 IF /i "%SWITCH_TO_BRANCH%" == "true" (
-	ECHO switch to branch release-%SAGA_VER_TEXT%
-	%GITEXE% checkout release-%SAGA_VER_TEXT%
+	ECHO switch to branch saga-%SAGA_VER_TEXT%
+	%GITEXE% checkout saga-%SAGA_VER_TEXT%
 )
 
 RMDIR /S/Q .git
@@ -235,7 +235,7 @@ ECHO #        F I N I S H E D         #
 ECHO #      with the preparation      #
 ECHO #    of the release files for    #
 ECHO #                                #
-ECHO #          SAGA %SAGA_VER_TEXT%            #
+ECHO #          SAGA %SAGA_VER_NEXT%            #
 ECHO #                                #
 ECHO ##################################
 ECHO __________________________________
@@ -272,7 +272,7 @@ ECHO.
 ECHO - Add new bug tracker milestone for next aspired version
 ECHO.    https://sourceforge.net/p/saga-gis/bugs/milestones
 ECHO.
-ECHO - Commit a comment like: SAGA version updated to %SAGA_VER_TEXT%
+ECHO - Commit a comment like: SAGA version updated to %SAGA_VER_NEXT%
 ECHO.    https://sourceforge.net/p/saga-gis/news/
 ECHO.
 ECHO __________________________________
