@@ -5,6 +5,7 @@ on:
     branches: 
     - "master"
     - release/*
+    - gh-actions-ubuntu
   pull_request:
     branches: [ "master" ]
   workflow_dispatch:
