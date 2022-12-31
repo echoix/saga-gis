@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies Ubuntu
       run: |
         sudo apt-get update 
-        sudo apt-get install -y libtiff5-dev libgdal-dev libproj-dev libexpat1-dev libogdi-dev unixodbc-dev
+        sudo apt-get install -y libtiff5-dev libgdal-dev libproj-dev libexpat1-dev libogdi-dev unixodbc-dev libnotify-devel
         sudo apt-add-repository 'deb https://repos.codelite.org/wx3.2/ubuntu/ jammy universe'
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6856E1DB1AC82609
         sudo apt update 
